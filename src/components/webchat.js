@@ -38,9 +38,9 @@ class WebChatCP extends Component {
             body: 
             `{    
               user: {  
-                id: "dl_123", // user id must start with 'dl_'
+                id: "dl_123_2", // user id must start with 'dl_'
                 name: "user"
-              } 
+              }
             }`
         }
     )
@@ -60,6 +60,7 @@ class WebChatCP extends Component {
         (<div id="webchat" className="WebChat">
           <ReactWebChat 
             directLine={ window.WebChat.createDirectLine({ token }) }
+
             styleOptions={styleOptions}
           /> 
         </div>)

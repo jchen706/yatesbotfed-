@@ -1,0 +1,74 @@
+/* Content */
+
+.starbox .content {
+  background: url(/images/star_rating/container-bg.gif) top left no-repeat;
+  height: 17px;
+  padding: 3px 0 15px 4px;
+  border-bottom: 1px dashed #8cc63f;
+  margin-bottom: 15px;
+}
+
+.starbox .content .stars,
+.starbox .content .hover .stars,
+.starbox .content .rated .stars,
+.starbox .content .rated .hover .stars {
+  background: url(/images/star_rating/content-background.gif) top left repeat-x;
+}
+
+.starbox .content .colorbar,
+.starbox .content .rated .colorbar,
+.starbox .content .rated .hover .colorbar {
+  background: #b70007;
+}
+
+.starbox .content .hover .colorbar {
+  background: #2a7636;
+}
+
+.starbox .content .ghost {
+  background: #d9d9d9;
+}
+
+.starbox .content .indicator {
+  font-size: 11px;
+  margin-left: 97px;
+  padding-top: 3px;
+}
+
+.starbox .content .stars {
+  float: left;
+}
+
+/* Recent feedback */
+
+.starbox .feedback {
+  float: left;
+  clear: left;
+  margin-right: 25px;
+}
+
+.starbox .feedback .stars,
+.starbox .feedback .hover .stars,
+.starbox .feedback .rated .stars,
+.starbox .feedback .rated .hover .stars {
+  background: url(/images/star_rating/feedback-background.gif) top left repeat-x;
+}
+
+.starbox .feedback .colorbar,
+.starbox .feedback .rated .colorbar {
+  background: #2a7636;
+}
+
+/* Tout */
+
+.starbox .tout .stars,
+.starbox .tout .hover .stars,
+.starbox .tout .rated .stars,
+.starbox .tout .rated .hover .stars {
+  background: url(/images/star_rating/tout-background.gif) top left repeat-x;
+}
+
+.starbox .tout .colorbar,
+.starbox .tout .rated .colorbar {
+  background: #b70007;
+}

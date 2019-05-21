@@ -1,43 +1,22 @@
 .App {
-  text-align: center;
-  height:100%;
+  flex: 1 0 auto;
 }
 
-.App div:first-child {
-  height:inherit;
-
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-contianer {
+  min-height: 300vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .WebChat {
-  width: 100%;
+  width: 350px;
+  height: 400px;
+  position: fixed;
+  bottom: 0%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bubble {
+  margin-left: 0px;
 }

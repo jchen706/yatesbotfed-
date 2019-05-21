@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
-import WebChatCP from './components/webchat'
+import YatesWebsiteBackground from './components/YatesWebsiteBackground';
+import ChatWindow from './components/ChatWindow';
 
 function App() {
   return (
     <div className="App">
-      <div>
-        <WebChatCP></WebChatCP>
+      <div className="App-contianer">
+        <YatesWebsiteBackground />
       </div>
+
+      <ChatWindow />
     </div>
   );
 }

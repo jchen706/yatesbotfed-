@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import ReactWebChat from 'botframework-webchat';
 
 // Complete list of style options found at:
 // https://github.com/microsoft/BotFramework-WebChat/blob/master/packages/component/src/Styles/defaultStyleOptions.js
 
-const webChatStyleOptions = {
-  // bot bubble styles
-  bubbleBackground: '#eaeaea;',
-  bubbleTextColor: '#212121',
-  bubbleBorderRadius: 5,
-  // bot bubble styles
-  bubbleFromUserBackground: '#dfedcb',
-  bubbleFromUserTextColor: '#ffffff',
-  bubbleFromUserBorderRadius: 5,
-  bubbleFromUserBorder: 'solid 1px #dfedcb',
-  // brand avatar
-  botAvatarImage: 'partner-yates.jpg',
-  avatarSize: 40,
-  accent: '#ffffff'
-};
+const WebChat = styled.div`
+  width: 350px;
+  height: 400px;
+  position: fixed;
+  bottom: 0%;
+  flex-grow: 1;
+  z-index: 9999999999;
+
+  @media (max-width: 720px) {
+    width: 100%;
+    height: 90vh;
+  }
+`;
 
 class WebChatCP extends Component {
   constructor(props) {
@@ -60,15 +59,31 @@ class WebChatCP extends Component {
 
     return (
       !!token && (
-        <div id="webchat" className="WebChat">
+        <WebChat id="webchat">
           <ReactWebChat
             directLine={window.WebChat.createDirectLine({ token })}
             styleOptions={webChatStyleOptions}
           />
-        </div>
+        </WebChat>
       )
     );
   }
 }
+
+const webChatStyleOptions = {
+  // bot bubble styles
+  bubbleBackground: '#eaeaea;',
+  bubbleTextColor: '#212121',
+  bubbleBorderRadius: 5,
+  // bot bubble styles
+  bubbleFromUserBackground: '#dfedcb',
+  bubbleFromUserTextColor: '#ffffff',
+  bubbleFromUserBorderRadius: 5,
+  bubbleFromUserBorder: 'solid 1px #dfedcb',
+  // brand avatar
+  botAvatarImage: 'partner-yates.jpg',
+  avatarSize: 40,
+  accent: '#ffffff'
+};
 
 export default WebChatCP;

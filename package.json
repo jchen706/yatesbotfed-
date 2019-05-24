@@ -5,6 +5,7 @@
   "dependencies": {
     "botframework-directlinejs": "^0.11.4",
     "botframework-webchat": "^4.4.1",
+    "http-server": "^0.11.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",

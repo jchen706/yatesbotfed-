@@ -11,6 +11,13 @@ const ChatWindowHeader = styled.div`
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   width: 350px;
+  z-index: 9999999999;
+
+  @media (max-width: 720px) {
+    width: 100vw;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
 `;
 
 const ChatWindowTitle = styled.h1`
@@ -19,6 +26,7 @@ const ChatWindowTitle = styled.h1`
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
   transition: color 0.3s ease;
+  z-index: 9999999999;
 `;
 
 const ChatWindowBody = styled.div`
@@ -30,14 +38,19 @@ const ChatWindowBody = styled.div`
   height: ${props => (props.windowOpen ? '400px' : '0px')};
   visibility: ${props => (props.windowOpen ? 'visible' : 'hidden')};
   overflow: hidden;
+  z-index: 9999999999;
+
+  @media (max-width: 720px) {
+    width: 900vw;
+    height: ${props => (props.windowOpen ? '90vh' : '0px')};
+    border-left: none;
+    border-right: none;
+  }
 `;
 
 const ChatWindowContainer = styled.div`
-  position: fixed;
-  left: 80%;
-  bottom: 0%;
-  transform: translateX(-50%);
   box-shadow: 1px -3px 30px -7px rgba(0, 0, 0, 0.35);
+  z-index: 9999999999;
 `;
 
 const ChatWindow = () => {

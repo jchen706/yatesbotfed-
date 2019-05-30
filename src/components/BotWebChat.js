@@ -7,12 +7,11 @@ import ReactWebChat from 'botframework-webchat';
 // https://github.com/microsoft/BotFramework-WebChat/blob/master/packages/component/src/Styles/defaultStyleOptions.js
 
 const WebChat = styled.div`
-  width: 350px;
+  width: 550px;
   height: 400px;
-  position: fixed;
+  position: relative;
   bottom: 0%;
   flex-grow: 1;
-  z-index: 9999999999;
 
   @media (max-width: 720px) {
     width: 100%;
@@ -76,7 +75,7 @@ const webChatStyleOptions = {
   bubbleTextColor: '#212121',
   bubbleBorderRadius: 5,
   // bot bubble styles
-  bubbleFromUserBackground: '#dfedcb',
+  bubbleFromUserBackground: '#66a000',
   bubbleFromUserTextColor: '#ffffff',
   bubbleFromUserBorderRadius: 5,
   bubbleFromUserBorder: 'solid 1px #dfedcb',

@@ -4,14 +4,13 @@ import styled from 'styled-components';
 import BotWebChat from './BotWebChat';
 
 const ChatWindowHeader = styled.div`
-  background: #d31145;
-  color: white;
+  background: #66a000;
+  color: #fff;
   font-size: 0.8em;
-  border: 5px solid #d31145;
+  border: 5px solid #66a000;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  width: 350px;
-  z-index: 9999999999;
+  width: 550px;
 
   @media (max-width: 720px) {
     width: 100vw;
@@ -27,14 +26,16 @@ const ChatWindowTitle = styled.h1`
   margin-bottom: 0.3rem;
   transition: color 0.3s ease;
   z-index: 9999999999;
+  color: #fff;
 `;
 
 const ChatWindowBody = styled.div`
   font-size: 0.8em;
   background: white;
-  border-left: 5px solid #d31145;
-  border-right: 5px solid #d31145;
-  width: 350px;
+  border-left: 5px solid #66a000;
+  border-right: 5px solid #66a000;
+  border-bottom: 5px solid #66a000;
+  width: 550px;
   height: ${props => (props.windowOpen ? '400px' : '0px')};
   visibility: ${props => (props.windowOpen ? 'visible' : 'hidden')};
   overflow: hidden;
@@ -49,7 +50,6 @@ const ChatWindowBody = styled.div`
 `;
 
 const ChatWindowContainer = styled.div`
-  box-shadow: 1px -3px 30px -7px rgba(0, 0, 0, 0.35);
   z-index: 9999999999;
 `;
 
@@ -58,15 +58,15 @@ const ChatWindow = () => {
 
   return (
     <ChatWindowContainer>
-      <ChatWindowHeader onClick={() => toggleWindow(!windowOpen)}>
+      <ChatWindowHeader>
         <ChatWindowTitle>
           {windowOpen
             ? "You're now chatting with Yates!"
-            : 'Have a question? Click here.'}
+            : 'Type your question below'}
         </ChatWindowTitle>
       </ChatWindowHeader>
 
-      <ChatWindowBody windowOpen={windowOpen}>
+      <ChatWindowBody windowOpen={true}>
         <BotWebChat />
       </ChatWindowBody>
     </ChatWindowContainer>
